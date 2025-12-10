@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Metadatos adaptados a la categoría "Volador" -->
+    <title>IESTP SDM | POKECLASE — Tipo: Volador</title>
+    <meta name="description" content="Bienvenido a POKECLASE: Proyecto académico del IESTP Señor de la Divina Misericordia. Aplicación que consume la PokéAPI para mostrar información individual y listas dinámicas de Pokémon del tipo Volador.
+    ">
+    <meta name="theme-color" content="#E6F6FF">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class ="type-flying">
+    <div class="page">
+      <header class="hero">
+        <div class="header">
+            <h1 class="brand-name">IESTP Señor de la Divina Misericordia</h1>
+            <h2 class="brand-note">Explorador oficial de PokéAPI</h2>
+            <img src="https://www.isdm.edu.pe/images/logo---copia_cizweupl.png" alt="Logo del instituto" class="logo-slot">
+            <div class="brand-logo">
+            
+            <!-- --- INFORMACIÓN PERSONAL: reemplaza con tus datos --- -->
+            <div class="student-info" aria-label="Información del estudiante">
+              <div class="student-name">NOMBRE: <strong>Elizabeth Sofia Santos Casimiro</strong></div>
+              <div class="student-cycle">CICLO: <strong>VI</strong></div>
+              <div class="student-career">CARRERA: <strong>Arquitectura de Plataformas y Servicios TI</strong></div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="titles">
+          <h1>POKECLASE - TIPO: VOLADOR</h1>
+          <p>Bienvenido a POKECLASE: Proyecto académico del IESTP Señor de la Divina Misericordia. Aplicación que consume la PokéAPI para mostrar información individual y listas dinámicas de Pokémon del tipo Volador.
+          </p>
+        </div>
+
+        <div class="actions">
+          <form id="search-form" class="search-form" aria-label="Formulario de búsqueda de Pokémon">
+            <label for="pokemon-input">Nombre o ID del Pokémon</label>
+            <div class="input-group">
+              <input id="pokemon-input" name="pokemon" type="text" placeholder="Ejemplo: pidgey o 16" autocomplete="off" required>
+
+              <button type="submit" class="btn buscar-btn">
+              <span class="icono">🔍</span>
+             <span class="texto">BUSCAR</span>
+             </button>
+
+            </div>
+          </form>
+        </div>
+      </header>
+
+      <section class="status" id="status" aria-live="polite"></section>
+
+      <section class="single" aria-live="polite">
+        <h2>Resultado individual</h2>
+        <div id="pokemon-card" class="card single-card empty">
+          <p class="placeholder">Ingresa un nombre o ID para ver la información del Pokémon.</p>
+        </div>
+        
+       <section class="flying-section">
+        <div class="section-header">
+          <h2>Pokémon de tipo Volador</h2>
+          <p>Lista dinámica obtenida desde la PokéAPI.</p>
+          <button class="flying-btn" id="flying-btn"
+          type="button">Traer todos los de  tipo Volador</button>
+
+        </div>
+
+        <div id="flying-grid" class="grid"></div>
+      </section>
+    </div>
+
+    <footer class="page-footer">
+      <small>Proyecto Final - PokeClase · IESTP Señor de la Divina Misericordia</small>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
